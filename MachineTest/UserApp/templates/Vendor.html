@@ -1,0 +1,15 @@
+{%extends "home.html" %}
+
+{%block content%}
+<br>
+{%if messages%}
+{%for msg in messages%} 
+    <div class="alert alert-success alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>
+        <h3><strong>{{msg}} {{request.session.uname}} </strong></h3>
+    </div>
+    {%endfor%}
+{%endif%}
+<br><br>
+<h1 style="font-weight: bolder;">Vendor Dashboard</h1>
+{%endblock%}
